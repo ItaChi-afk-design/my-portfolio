@@ -26,5 +26,8 @@ RUN composer dump-autoload --no-dev --optimize --no-interaction \
 
 ENV APP_ENV=production
 ENV LOG_CHANNEL=stderr
+ENV PORT=10000
+
+EXPOSE 10000
 
 CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t public"]
