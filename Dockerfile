@@ -11,7 +11,6 @@ RUN npm run build
 
 FROM php:8.2-cli-alpine
 
-RUN docker-php-ext-install pdo pdo_sqlite
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
