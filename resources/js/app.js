@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigationLinks = document.querySelectorAll('.main-nav a');
 
     if (menuButton && navigation) {
+        const closeNavigation = () => {
+            navigation.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation');
+        };
+
         menuButton.addEventListener('click', () => {
             const isOpen = navigation.classList.toggle('open');
 
@@ -20,11 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navigationLinks.forEach((link) => {
             link.addEventListener('click', () => {
-                navigation.classList.remove('open');
-                document.body.classList.remove('menu-open');
-                menuButton.setAttribute('aria-expanded', 'false');
-                menuButton.setAttribute('aria-label', 'Open navigation');
+                closeNavigation();
             });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (
+                navigation.classList.contains('open') &&
+                !navigation.contains(event.target) &&
+                !menuButton.contains(event.target)
+            ) {
+                closeNavigation();
+            }
         });
     }
 

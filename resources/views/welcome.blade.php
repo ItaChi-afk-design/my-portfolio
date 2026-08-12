@@ -314,7 +314,7 @@
                 <a href="#home" class="brand" aria-label="Billy Harion home"><span class="brand-mark">B</span><span>Billy Harion</span></a>
                 <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><svg><use href="#menu"/></svg></button>
                 <nav class="main-nav" aria-label="Main navigation">
-                    <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact" onclick="openContactModal(); return false;">Contact</a><a class="mobile-cv-link" href="{{ asset('cv/Resume.pdf') }}" download="Billy-Harion-CV.pdf"><svg><use href="#download"/></svg>Download CV</a>
+                    <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact" onclick="openContactModal(); return false;">Contact</a>
                 </nav>
                 <a class="cv-link" href="{{ asset('cv/Resume.pdf') }}" download="Billy-Harion-CV.pdf"><svg><use href="#download"/></svg>Download CV</a>
             </header>
