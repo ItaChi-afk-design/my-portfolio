@@ -16,7 +16,7 @@ class ContactFormTest extends TestCase
 
         $response = $this->post(route('contact.send'), [
             'name' => 'Jane Doe',
-            'email' => 'jane@example.com',
+            'email' => 'jane@gmail.com',
             'phone' => '+1 555 0100',
             'message' => 'Hello from the contact form.',
         ]);
@@ -31,7 +31,7 @@ class ContactFormTest extends TestCase
 
         Mail::assertSent(ContactFormSubmitted::class, function (ContactFormSubmitted $mail) {
             return $mail->data['name'] === 'Jane Doe'
-                && $mail->data['email'] === 'jane@example.com'
+                && $mail->data['email'] === 'jane@gmail.com'
                 && $mail->data['phone'] === '+1 555 0100';
         });
     }
@@ -42,13 +42,24 @@ class ContactFormTest extends TestCase
 
         $response = $this->post(route('contact.send'), [
             'name' => 'Jane Doe',
-            'email' => 'jane@example.com',
+            'email' => 'jane@gmail.com',
             'phone' => '+1 555 0100',
             'message' => 'Hello from the contact form.',
         ]);
 
         $response->assertRedirect();
         $response->assertSessionHas('error');
+    }
+
+    public function test_an_invalid_email_address_is_rejected(): void
+    {
+        $response = $this->post(route('contact.send'), [
+            'name' => 'Jane Doe',
+            'email' => 'not-an-email',
+            'message' => 'Hello from the contact form.',
+        ]);
+
+        $response->assertSessionHasErrors('email');
     }
 
 }

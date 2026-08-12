@@ -441,15 +441,15 @@
                     @csrf
                     <label>
                         <span>Full Name</span>
-                        <input type="text" name="name" placeholder="John Doe" value="{{ old('name') }}" required>
+                        <input type="text" name="name" placeholder="John Doe" value="{{ old('name') }}" autocomplete="name" required>
                     </label>
                     <label>
                         <span>Email Address</span>
-                        <input type="email" name="email" placeholder="you@company.com" value="{{ old('email') }}" required>
+                        <input type="email" name="email" placeholder="you@company.com" value="{{ old('email') }}" autocomplete="email" inputmode="email" required>
                     </label>
                     <label>
                         <span>Phone Number</span>
-                        <input type="text" name="phone" placeholder="+1 (555) 1234-567" value="{{ old('phone') }}">
+                        <input type="tel" name="phone" placeholder="+1 (555) 1234-567" value="{{ old('phone') }}" autocomplete="tel" inputmode="tel">
                     </label>
                     <label>
                         <span>Your Message</span>
@@ -501,6 +501,10 @@
             document.addEventListener('DOMContentLoaded', function() {
                 if (window.location.hash === '#contact' || document.querySelector('.contact-success, .contact-error')) {
                     openContactModal();
+                }
+
+                if (document.getElementById('contactSuccessMessage')) {
+                    window.setTimeout(closeContactModal, 4000);
                 }
             });
         </script>
