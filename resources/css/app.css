@@ -158,7 +158,7 @@ h2 {
     left: 50%;
     display: grid;
     width: min(calc(100% - 48px), var(--shell-width));
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     align-items: center;
     min-height: 72px;
     padding: 0 22px;
@@ -195,7 +195,7 @@ h2 {
 
 .main-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 40px;
 }
 
@@ -244,35 +244,6 @@ h2 {
 .main-nav a:focus-visible::after {
     opacity: 1;
     transform: scaleX(1);
-}
-
-.cv-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 0 20px;
-    border: 1px solid rgba(53, 117, 255, 0.8);
-    border-radius: 13px;
-    color: #71a0ff;
-    font-size: 13px;
-    font-weight: 500;
-    gap: 9px;
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.cv-link svg {
-    width: 17px;
-    height: 17px;
-}
-
-.cv-link:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-2px);
 }
 
 .menu-toggle {
@@ -1239,10 +1210,6 @@ h2 {
     .main-nav a.active {
         background: rgba(62, 119, 255, 0.18);
         color: #ffffff;
-    }
-
-    .cv-link {
-        display: none;
     }
 
     .hero {
