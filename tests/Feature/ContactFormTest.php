@@ -24,6 +24,11 @@ class ContactFormTest extends TestCase
         $response->assertRedirect('/#contact');
         $response->assertSessionHas('success');
 
+        $confirmationPage = $this->get('/');
+
+        $confirmationPage->assertSee('contactSuccessMessage');
+        $confirmationPage->assertDontSee('Full Name');
+
         Mail::assertSent(ContactFormSubmitted::class, function (ContactFormSubmitted $mail) {
             return $mail->data['name'] === 'Jane Doe'
                 && $mail->data['email'] === 'jane@example.com'

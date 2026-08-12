@@ -414,16 +414,16 @@
         </div></section>
         <section class="experience section shell" id="experience"><div class="section-heading center"><p class="eyebrow">My Experience</p><h2>My Journey So Far</h2></div><div class="timeline"><article><span class="timeline-dot"></span><div><h3>IT Support (OJT)</h3><p class="time-place">AKAIT · Jan 2026 – Mar 2026</p><p>Troubleshooting hardware/software issues, system<br>maintenance, network monitoring and user support.</p></div></article><article><span class="timeline-dot"></span><div><h3>Registrar (OJT)</h3><p class="time-place">PMFTC Inc. · Nov 2025 – Dec 2025</p><p>Processed student records, encoded data in the system<br>and supported office administrative tasks.</p></div></article></div></section>
         <div class="modal-backdrop" id="contactModal" aria-hidden="true">
-            <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+            <div class="contact-modal" role="dialog" aria-modal="true" @if(session('success')) aria-labelledby="contactSuccessMessage" @else aria-labelledby="contactModalTitle" @endif>
                 <button type="button" class="modal-close" aria-label="Close contact form" onclick="closeContactModal()">×</button>
+                @if(session('success'))
+                    <div class="contact-success" id="contactSuccessMessage" role="status">{{ session('success') }}</div>
+                @else
                 <div class="modal-header">
                     <p class="eyebrow contact-eyebrow">Contact Us</p>
                     <h2 id="contactModalTitle">Send us a message</h2>
                     <p class="contact-text">Fill up the form below to send us a message.</p>
                 </div>
-                @if(session('success'))
-                    <div class="contact-success">{{ session('success') }}</div>
-                @endif
                 @if(session('error'))
                     <div class="contact-error" role="alert">{{ session('error') }}</div>
                 @endif
@@ -457,6 +457,7 @@
                     </label>
                     <button class="button button-primary" type="submit">Send Message</button>
                 </form>
+                @endif
             </div>
         </div>
         <script>
