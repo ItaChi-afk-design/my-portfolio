@@ -273,6 +273,77 @@
             min-height: 150px;
         }
 
+        @media (max-width: 600px) {
+            .modal-backdrop {
+                align-items: end;
+                overflow-y: auto;
+                padding: 0.75rem;
+            }
+
+            .contact-modal {
+                max-height: calc(100vh - 1.5rem);
+                max-height: calc(100dvh - 1.5rem);
+                padding: 1.35rem;
+                overflow-y: auto;
+                border-radius: 1.35rem;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .modal-close {
+                top: 0.75rem;
+                right: 0.75rem;
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+
+            .modal-header {
+                padding-right: 2.5rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .modal-header .contact-eyebrow {
+                font-size: 0.68rem;
+                margin-bottom: 0.55rem;
+            }
+
+            .modal-header h2 {
+                font-size: clamp(1.65rem, 8vw, 2rem);
+            }
+
+            .modal-header .contact-text {
+                font-size: 0.93rem;
+                line-height: 1.6;
+            }
+
+            .modal-form {
+                gap: 0.85rem;
+                padding: 1.1rem;
+                border-radius: 1rem;
+            }
+
+            .contact-form label {
+                gap: 0.35rem;
+                font-size: 0.86rem;
+            }
+
+            .modal-form input,
+            .modal-form textarea {
+                padding: 0.85rem 0.9rem;
+                border-radius: 0.8rem;
+                font-size: 16px;
+            }
+
+            .modal-form textarea {
+                min-height: 120px;
+            }
+
+            .modal-form .button {
+                width: 100%;
+                min-height: 48px;
+                max-width: none;
+            }
+        }
+
         @media (min-width: 1024px) {
             .contact-grid {
                 grid-template-columns: 1.05fr 0.95fr;
