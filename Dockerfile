@@ -13,6 +13,9 @@ FROM php:8.2-cli-alpine
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
+RUN apk add --no-cache postgresql-dev \
+    && docker-php-ext-install pdo_pgsql
+
 WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
@@ -30,4 +33,4 @@ ENV PORT=10000
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t public"]
+CMD ["sh", "-c", "if [ \"${CONTACT_EMAIL_VERIFICATION:-false}\" = \"true\" ]; then php artisan migrate --force; fi; exec php -S 0.0.0.0:${PORT:-10000} -t public"]

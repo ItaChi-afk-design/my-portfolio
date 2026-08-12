@@ -123,4 +123,6 @@ return [
 
     'contact_recipient' => env('CONTACT_FORM_RECIPIENT', 'harionbilly4@gmail.com'),
 
+    'contact_verification_enabled' => env('CONTACT_EMAIL_VERIFICATION', false),
+
 ];
