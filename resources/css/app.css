@@ -1241,6 +1241,27 @@ h2 {
         color: #ffffff;
     }
 
+    .main-nav .mobile-cv-link {
+        grid-column: 1 / -1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--primary);
+        color: #ffffff;
+    }
+
+    .main-nav .mobile-cv-link:hover,
+    .main-nav .mobile-cv-link:focus-visible {
+        background: #5a8cff;
+        color: #ffffff;
+    }
+
+    .mobile-cv-link svg {
+        width: 16px;
+        height: 16px;
+    }
+
     .cv-link {
         display: none;
     }
