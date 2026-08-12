@@ -424,6 +424,9 @@
                 @if(session('success'))
                     <div class="contact-success">{{ session('success') }}</div>
                 @endif
+                @if(session('error'))
+                    <div class="contact-error" role="alert">{{ session('error') }}</div>
+                @endif
                 @if($errors->any())
                     <div class="contact-error" role="alert">
                         <p>Please correct the following:</p>
