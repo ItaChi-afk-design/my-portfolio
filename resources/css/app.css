@@ -1201,7 +1201,7 @@ h2 {
         right: 17px;
         left: 17px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         padding: 10px;
         border-radius: 18px;
         background: linear-gradient(145deg, rgba(13, 29, 52, 0.95), rgba(6, 15, 29, 0.94));
