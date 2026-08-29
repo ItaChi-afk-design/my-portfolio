@@ -1,0 +1,43 @@
+.contact { display: grid; grid-template-columns: auto 1fr auto; align-items: center; min-height: 128px; margin-bottom: 35px; padding: 25px 38px; border-radius: 19px; background: radial-gradient(circle at 80% 40%, rgba(45, 107, 255, 0.12), transparent 24%), #07101f; box-shadow: 0 25px 55px rgba(8, 17, 34, 0.22); color: white; gap: 25px; }
+.contact .plane { color: var(--primary); font-size: 37px; transform: rotate(-35deg); }
+.contact h2 { margin-bottom: 3px; font-size: 20px; letter-spacing: -0.3px; }
+.contact p { color: #b6bfce; font-size: 12px; }
+.contact .button { min-width: 160px; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+.contact-info { display: grid; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 1.25rem; background: #ffffff; box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08); color: #0f172a; gap: 1.25rem; }
+.contact-eyebrow { margin: 0; color: #2563eb; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; }
+.contact-info h2 { margin: 0; color: #0f172a; font-size: clamp(1.8rem, 2.5vw, 2.4rem); line-height: 1.1; }
+.contact-text { max-width: 32rem; margin: 0; color: #475569; line-height: 1.75; }
+.contact-cards { display: grid; gap: 0.9rem; }
+.contact-card { display: grid; grid-template-columns: auto 1fr; align-items: center; padding: 0.95rem 1rem; border: 1px solid rgba(148, 163, 184, 0.22); border-radius: 1rem; background: #f8fafc; gap: 0.85rem; }
+.contact-icon { display: grid; width: 2.7rem; height: 2.7rem; place-items: center; border-radius: 0.95rem; background: rgba(37, 99, 235, 0.12); }
+.contact-icon svg { width: 1.2rem; height: 1.2rem; fill: none; stroke: #2563eb; stroke-width: 1.5; }
+.card-title { margin: 0 0 0.2rem; color: #0f172a; font-size: 0.92rem; font-weight: 700; }
+.card-value { margin: 0; color: #475569; font-size: 0.9rem; word-break: break-word; }
+.contact-socials { display: flex; align-items: center; margin-top: 0.75rem; gap: 1rem; }
+.contact-socials a { display: grid; width: 3rem; height: 3rem; place-items: center; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; background: rgba(255, 255, 255, 0.05); }
+.contact-socials svg { width: 1rem; height: 1rem; fill: #ffffff; }
+
+.contact-form { display: grid; padding: 1.5rem; border: 1px solid rgba(148, 163, 184, 0.24); border-radius: 1.25rem; background: #ffffff; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06); gap: 1rem; }
+.contact-form .form-row { display: grid; gap: 1rem; }
+.contact-form label { display: grid; color: #0f172a; font-size: 0.9rem; gap: 0.45rem; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 0.95rem 1rem; border: 1px solid rgba(148, 163, 184, 0.3); border-radius: 0.95rem; outline: none; background: #f8fafc; color: #0f172a; font: inherit; }
+.contact-form textarea { min-height: 140px; resize: vertical; }
+.contact-form button { align-self: start; max-width: 220px; }
+.contact-success, .contact-error { margin-bottom: 1rem; padding: 1rem 1.2rem; border-radius: 1rem; font-size: 0.95rem; line-height: 1.6; }
+.contact-success { border: 1px solid rgba(34, 197, 94, 0.28); background: rgba(34, 197, 94, 0.12); color: #134e4a; }
+.contact-error { border: 1px solid rgba(239, 68, 68, 0.28); background: rgba(239, 68, 68, 0.1); color: #991b1b; }
+.contact-error p, .contact-error ul { margin: 0; }
+.contact-error ul { padding-left: 1.25rem; }
+
+.modal-backdrop { display: none; position: fixed; z-index: 999; inset: 0; place-items: center; padding: 1.25rem; background: rgba(15, 23, 42, 0.65); }
+.contact-modal { position: relative; width: min(600px, 100%); padding: 2rem; border-radius: 1.75rem; background: #ffffff; box-shadow: 0 40px 80px rgba(15, 23, 42, 0.18); }
+.modal-close { position: absolute; top: 1rem; right: 1rem; width: 2.5rem; height: 2.5rem; border: none; border-radius: 50%; background: rgba(15, 23, 42, 0.08); color: #0f172a; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.modal-header { margin-bottom: 1.5rem; }
+.modal-header .contact-eyebrow { margin-bottom: 0.75rem; color: #2563eb; font-size: 0.78rem; letter-spacing: 0.25em; }
+.modal-header h2 { margin: 0 0 0.6rem; color: #0f172a; font-size: 2rem; line-height: 1.05; }
+.modal-header .contact-text { margin: 0; color: #475569; line-height: 1.7; }
+.modal-form label span { display: block; color: #0f172a; font-weight: 600; }
+.modal-form input, .modal-form textarea { border: 1px solid rgba(148, 163, 184, 0.3); background: #f8fafc; color: #0f172a; }
+.modal-form textarea { min-height: 150px; }

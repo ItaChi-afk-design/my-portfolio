@@ -1,6 +1,15 @@
 import './bootstrap';
+import { initializeContactModal } from './contact-modal';
+import { initializeRoleRotator } from './role-rotator';
+import { initializeScrollReveal } from './scroll-reveal';
+
+document.documentElement.classList.add('has-scroll-reveal');
 
 document.addEventListener('DOMContentLoaded', () => {
+    initializeContactModal();
+    initializeRoleRotator();
+    initializeScrollReveal();
+
     const menuButton = document.querySelector('.menu-toggle');
     const navigation = document.querySelector('.main-nav');
     const navigationLinks = document.querySelectorAll('.main-nav a');

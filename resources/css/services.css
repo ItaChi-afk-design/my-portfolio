@@ -1,0 +1,18 @@
+.services { position: relative; isolation: isolate; padding-top: 34px; padding-bottom: 88px; }
+.services::before { position: absolute; z-index: -1; inset: 0 -100vmax; background: #f8fafc; content: ""; }
+.services-heading { text-align: center; }
+.services-heading h2 { color: #111827; font-size: clamp(31px, 3.1vw, 40px); font-weight: 800; letter-spacing: 0.25px; text-transform: uppercase; }
+.services-heading h2 span { color: var(--primary); }
+.services-heading .heading-rule { width: 58px; height: 3px; margin-top: 14px; }
+.services-heading > p { max-width: 720px; margin: 22px auto 0; color: #697386; font-size: 18px; line-height: 1.6; }
+.services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 68px; gap: 30px; }
+.service-card { display: flex; min-height: 378px; flex-direction: column; align-items: center; padding: 40px 42px; border: 1px solid #e8ecf2; border-radius: 18px; background: #ffffff; box-shadow: 0 2px 5px rgba(17, 24, 39, 0.012); text-align: center; transition: border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.65s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1); }
+.has-scroll-reveal .service-card[data-scroll-reveal] { opacity: 0; transform: translateY(32px); }
+.has-scroll-reveal .service-card[data-scroll-reveal].is-visible { opacity: 1; transform: translateY(0); }
+.has-scroll-reveal .service-card[data-scroll-reveal]:nth-child(2) { transition-delay: 100ms; }
+.has-scroll-reveal .service-card[data-scroll-reveal]:nth-child(3) { transition-delay: 200ms; }
+.service-card:hover { border-color: #d9e2f5; box-shadow: 0 14px 32px rgba(30, 45, 78, 0.08); transform: translateY(-4px); }
+.service-icon { display: grid; width: 80px; height: 80px; place-items: center; border-radius: 20px; background: #e9efff; color: var(--primary); }
+.service-icon svg { width: 32px; height: 32px; stroke-width: 1.65; }
+.service-card h3 { margin-top: 28px; color: #0f172a; font-size: 22px; font-weight: 750; letter-spacing: -0.45px; }
+.service-card p { margin-top: 15px; color: #6b7587; font-size: 16px; line-height: 1.75; }

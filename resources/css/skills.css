@@ -1,0 +1,16 @@
+.skills { border-top: 1px solid rgba(220, 226, 237, 0.7); border-bottom: 1px solid rgba(220, 226, 237, 0.7); background: rgba(255, 255, 255, 0.56); }
+.section-heading.center { text-align: center; }
+.section-heading h2 { font-size: clamp(27px, 2.8vw, 38px); }
+.heading-rule { display: block; width: 32px; height: 2px; margin: 12px auto 0; border-radius: 99px; background: var(--primary); }
+.skill-list { display: grid; grid-template-columns: repeat(8, 1fr); margin-top: 47px; gap: 25px; }
+.skill { text-align: center; }
+.skill p { margin-top: 12px; color: #313947; font-size: 12px; }
+.tech-logo { display: grid; width: 58px; height: 58px; margin-inline: auto; place-items: center; font-weight: 800; }
+.tech-logo.html, .tech-logo.css { clip-path: polygon(12% 0, 88% 0, 79% 85%, 50% 100%, 21% 85%); color: white; font-size: 28px; }
+.tech-logo.html { background: #ef512e; }
+.tech-logo.css { background: #2868e9; }
+.tech-logo.js { width: 48px; height: 48px; margin-top: 5px; background: #f2cd28; color: #202020; font-size: 16px; }
+.tech-logo.react { color: #22b8ee; font-size: 48px; font-weight: 400; }
+.tech-logo.php { width: 65px; height: 38px; margin-top: 10px; border-radius: 50%; background: #777bb3; color: #161a36; font-size: 18px; font-style: italic; }
+.tech-logo.mysql { color: #14658b; font-size: 54px; font-weight: 400; transform: rotate(-15deg); }
+.tech-logo.firebase { color: #ffb000; font-size: 48px; }
