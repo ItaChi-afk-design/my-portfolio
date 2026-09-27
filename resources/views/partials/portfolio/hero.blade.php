@@ -5,7 +5,13 @@
                 <span class="brand-mark" aria-hidden="true"><span>&lt;</span><span class="brand-slash">/</span><span>&gt;</span></span>
                 <span class="brand-name">Billy Harion</span>
             </a>
-            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><svg><use href="#menu"/></svg></button>
+            <div class="header-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <svg class="theme-icon theme-icon-moon" aria-hidden="true"><use href="#moon"/></svg>
+                    <svg class="theme-icon theme-icon-sun" aria-hidden="true"><use href="#sun"/></svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><svg><use href="#menu"/></svg></button>
+            </div>
             <nav class="main-nav" aria-label="Main navigation">
                 <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
             </nav>

@@ -15,4 +15,6 @@
     <symbol id="linkedin" viewBox="0 0 24 24"><path d="M6.5 9.5V18M6.5 6.5v.01M10.5 18v-4.7c0-2.5 4.5-2.7 4.5 0V18M15 12.2c.5-1.8 4-2.8 4 1.2V18"/></symbol>
     <symbol id="facebook" viewBox="0 0 24 24"><path d="M14 20v-7h2.5l.5-3H14V8.5c0-.87.3-1.5 1.65-1.5H17V4.3c-.3-.04-1.1-.13-2.08-.13-2.06 0-3.47 1.25-3.47 3.56V10H9v3h2.45v7"/></symbol>
     <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20.6 15.8A8.8 8.8 0 0 1 8.2 3.4 8.8 8.8 0 1 0 20.6 15.8Z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
 </svg>

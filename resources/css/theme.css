@@ -1,0 +1,87 @@
+:root {
+    --surface: #ffffff;
+    --surface-muted: #f8fafc;
+    --surface-field: #f8fafc;
+    --heading: #111827;
+    --card-heading: #0f172a;
+    --muted: #697386;
+    --card-text: #64748b;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --page-bg: #0b1220;
+    --surface: #101a2b;
+    --surface-muted: #0d1727;
+    --surface-field: #0b1524;
+    --text-dark: #eef4ff;
+    --text-body: #adbbd0;
+    --text-light: #d4ddec;
+    --border: #273852;
+    --heading: #edf3ff;
+    --card-heading: #edf3ff;
+    --muted: #b1c0d5;
+    --card-text: #b2c0d3;
+    --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 18px 50px rgba(0, 0, 0, 0.32);
+}
+
+body, .page-light, .about::before, .services::before, .skills, .project-card,
+.expertise-card, .service-card, .connect-cta, .contact-modal, .contact-form,
+.contact-info, .contact-card, .modal-form input, .modal-form textarea {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+html[data-theme="dark"] .page-light { background: var(--page-bg); }
+html[data-theme="dark"] .about::before,
+html[data-theme="dark"] .services::before { background: var(--surface-muted); }
+html[data-theme="dark"] .expertise-heading h2,
+html[data-theme="dark"] .services-heading h2,
+html[data-theme="dark"] .connect-cta h2 { color: var(--heading); }
+html[data-theme="dark"] .expertise-heading > p,
+html[data-theme="dark"] .services-heading > p,
+html[data-theme="dark"] .connect-copy,
+html[data-theme="dark"] .connect-details { color: var(--muted); }
+html[data-theme="dark"] .expertise-card,
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .project-card { border-color: var(--border); background: var(--surface); }
+html[data-theme="dark"] .expertise-card:hover,
+html[data-theme="dark"] .service-card:hover { border-color: #3a5277; box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25); }
+html[data-theme="dark"] .expertise-card h3,
+html[data-theme="dark"] .service-card h3 { color: var(--card-heading); }
+html[data-theme="dark"] .expertise-card > p,
+html[data-theme="dark"] .service-card p { color: var(--card-text); }
+html[data-theme="dark"] .expertise-icon,
+html[data-theme="dark"] .service-icon { background: rgba(76, 131, 255, 0.16); }
+html[data-theme="dark"] .expertise-card:hover .expertise-icon { background: rgba(76, 131, 255, 0.24); }
+html[data-theme="dark"] .expertise-tags li { background: #1b2a40; color: #c6d4e8; }
+html[data-theme="dark"] .skills { border-color: var(--border); background: rgba(16, 26, 43, 0.58); }
+html[data-theme="dark"] .skill p { color: #c2cede; }
+html[data-theme="dark"] .timeline::before { background: #334966; }
+html[data-theme="dark"] .timeline-dot { border-color: #203b66; box-shadow: 0 0 0 1px #4c83ff; }
+html[data-theme="dark"] .time-place { color: #acbad0 !important; }
+html[data-theme="dark"] .connect-cta { background: radial-gradient(circle at 50% 5%, rgba(72, 128, 255, 0.16), transparent 33%), linear-gradient(180deg, #0f1a2c 0%, #0b1220 78%); }
+html[data-theme="dark"] .connect-details a + a { border-color: #30425d; }
+html[data-theme="dark"] .contact-modal,
+html[data-theme="dark"] .contact-form,
+html[data-theme="dark"] .contact-info { border-color: var(--border); background: var(--surface); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24); color: var(--text-dark); }
+html[data-theme="dark"] .contact-info h2,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .contact-form label,
+html[data-theme="dark"] .modal-header h2,
+html[data-theme="dark"] .modal-form label span { color: var(--text-dark); }
+html[data-theme="dark"] .contact-text,
+html[data-theme="dark"] .card-value,
+html[data-theme="dark"] .modal-header .contact-text { color: var(--text-body); }
+html[data-theme="dark"] .contact-card { border-color: #2a3b55; background: var(--surface-field); }
+html[data-theme="dark"] .contact-form input,
+html[data-theme="dark"] .contact-form textarea,
+html[data-theme="dark"] .modal-form input,
+html[data-theme="dark"] .modal-form textarea { border-color: #334761; background: var(--surface-field); color: var(--text-dark); }
+html[data-theme="dark"] .modal-close { background: #1d2a3d; color: var(--text-dark); }
+
+@media (prefers-reduced-motion: reduce) {
+    body, .page-light, .about::before, .services::before, .skills, .project-card,
+    .expertise-card, .service-card, .connect-cta, .contact-modal, .contact-form,
+    .contact-info, .contact-card, .modal-form input, .modal-form textarea { transition: none; }
+}

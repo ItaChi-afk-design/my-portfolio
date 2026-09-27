@@ -6,6 +6,44 @@ import { initializeScrollReveal } from './scroll-reveal';
 document.documentElement.classList.add('has-scroll-reveal');
 
 document.addEventListener('DOMContentLoaded', () => {
+    const themeButton = document.querySelector('.theme-toggle');
+    const themeColor = document.querySelector('#theme-color');
+
+    const applyTheme = (theme, persist = false) => {
+        document.documentElement.dataset.theme = theme;
+
+        if (themeButton) {
+            const isDark = theme === 'dark';
+            themeButton.setAttribute('aria-pressed', String(isDark));
+            themeButton.setAttribute(
+                'aria-label',
+                isDark ? 'Switch to light mode' : 'Switch to dark mode'
+            );
+        }
+
+        if (themeColor) {
+            themeColor.setAttribute('content', theme === 'dark' ? '#0b1220' : '#050914');
+        }
+
+        if (persist) {
+            try {
+                localStorage.setItem('portfolio-theme', theme);
+            } catch {
+                // The theme still works if browser storage is unavailable.
+            }
+        }
+    };
+
+    applyTheme(document.documentElement.dataset.theme || 'light');
+
+    themeButton?.addEventListener('click', () => {
+        const nextTheme = document.documentElement.dataset.theme === 'dark'
+            ? 'light'
+            : 'dark';
+
+        applyTheme(nextTheme, true);
+    });
+
     initializeContactModal();
     initializeRoleRotator();
     initializeScrollReveal();
